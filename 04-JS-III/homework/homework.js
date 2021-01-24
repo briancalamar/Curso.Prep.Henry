@@ -166,12 +166,11 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  var n = "";
-  if (n[0] === 9){
+  var string = n.toString();
+  if (string[0] === "9"){
     return true;
   }
   else return false;
-  
 }
 
 
@@ -179,7 +178,13 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  
+  var pepe = arreglo[0];
+  for (var i = 1; i <arreglo.length; i++){
+    if (pepe !== arreglo[i]){
+      return false;
+    }
+    else return true;
+  }
 } 
 
 
@@ -188,6 +193,16 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var meses = [];
+  for (var i = 0; i < array.length ; i++){
+    if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
+      meses.push(array[i]);
+    }
+  }
+  if (meses.length !== 3){
+    return "No se encontraron los meses pedidos";
+  }
+  return meses;
 }
 
 
@@ -195,6 +210,13 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var grandes = []
+  for (var i = 0; i < array.length; i++){
+    if (array[i] > 100){
+      grandes.push(array[i]);
+    }
+  }
+  return grandes;
 }
 
 
@@ -206,6 +228,16 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var n = numero;
+  var caja = []
+  for (i = 0; i < 10; i++){
+    n = n + 2;
+    caja.push(n)
+    if (n === i){
+      return "Se interrumpió la ejecución";
+    }
+  }
+  return caja;
 }
 
 
@@ -216,6 +248,16 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var n = numero;
+  var caja = []
+  for (i = 0; i < 10; i++){
+    if (i === 5){
+      continue;
+    }
+    n = n + 2;
+    caja.push(n)
+  }
+  return caja;
 }
 
 
