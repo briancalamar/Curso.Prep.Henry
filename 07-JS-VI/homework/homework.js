@@ -57,11 +57,11 @@ function filter(array) {
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
   var filtrado = [];
-  for (i = 0; i < array.length; i++){
-    if (array[i][0] === "a"){
-      filtrado.push(array[i])
+  array.map(function(elemento){
+    if (elemento[0] === "a"){
+      filtrado.push(elemento)
     }
-  }
+  })
   return filtrado;
 }
 
