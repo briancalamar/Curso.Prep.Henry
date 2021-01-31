@@ -57,7 +57,7 @@ function filter(array) {
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
   var filtrado = [];
-  array.map(function(elemento){
+  array.forEach(function(elemento){
     if (elemento[0] === "a"){
       filtrado.push(elemento)
     }
