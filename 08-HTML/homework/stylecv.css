@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    width: 90%;
+    flex-flow: wrap ;
+}
+.up{
+    width: 80%;
+    text-align: center;
+    margin-right: 10%;
+}
+.fto{
+    width: 10%;
+    align-content: flex-end;
+}
+.fto img{
+    max-width: 120px;
+    max-height: 135px;
+}
+.info{
+    margin-left: 5%;
+    max-width: 80%;
+}
